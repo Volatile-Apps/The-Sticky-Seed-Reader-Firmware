@@ -1,0 +1,10 @@
+{
+  "project": "The Sticky Seed Reader",
+  "version": "2.1.0",
+  "version_code": 20100,
+  "release_date": "2026-09-27",
+  "min_supported_version": "1.0.0",
+  "firmware_binary_url": "https://github.com/Volatile-Apps/The-Sticky-Seed-Reader-Firmware/releases/download/latest/the_sticky_seed_reader.bin",
+  "factory_merged_binary_url": "https://github.com/Volatile-Apps/The-Sticky-Seed-Reader-Firmware/releases/download/latest/the_sticky_seed_reader_factory_merged.bin",
+  "release_notes": "Wi-Fi Reliability, Network Switching & Credential Management: Interactive Wi-Fi scanner modal dialog on e-paper, on-screen touch virtual keyboard for entering passphrases directly on device, persistent Wi-Fi connectivity across all pages (Library, Bookstore, Reader, Settings), 3-tier credential hierarchy (NVS -> /flash/wifi.txt -> /sdcard/wifi.txt), auto-reconnect protection, status bar active Wi-Fi badge, and Web Sideload Portal Wi-Fi configuration card."
+}
