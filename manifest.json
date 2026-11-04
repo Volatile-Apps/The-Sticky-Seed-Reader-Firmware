@@ -1,0 +1,15 @@
+{
+  "name": "The Sticky Seed Reader",
+  "version": "2.1.0",
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        {
+          "path": "the_sticky_seed_reader_factory_merged.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}

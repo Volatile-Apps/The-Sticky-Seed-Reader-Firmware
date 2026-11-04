@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Install The Sticky Seed Reader</title>
+  <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --card-bg: #ffffff;
+      --text: #1d1d1f;
+      --text-muted: #86868b;
+      --primary: #0071e3;
+      --border: #d2d2d7;
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .card {
+      background: var(--card-bg);
+      max-width: 620px;
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      padding: 40px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      background: #e5e5ea;
+      color: #3a3a3c;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+    p.subtitle { color: var(--text-muted); font-size: 15px; margin-bottom: 24px; line-height: 1.5; }
+    .features {
+      text-align: left;
+      background: #f9f9fb;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .features ul { list-style: none; }
+    .features li::before { content: "✓ "; color: var(--primary); font-weight: bold; }
+    .install-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin-top: 10px;
+    }
+    esp-web-install-button {
+      --esp-tools-button-border-radius: 10px;
+      --esp-tools-button-color: #ffffff;
+      --esp-tools-button-background-color: var(--primary);
+      --esp-tools-button-padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .troubleshoot {
+      text-align: left;
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-top: 24px;
+      font-size: 12.5px;
+      color: #6d4c41;
+      line-height: 1.5;
+    }
+    .troubleshoot strong { color: #bf360c; }
+    .links {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 13px;
+    }
+    a { color: var(--primary); text-decoration: none; font-weight: 500; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">Official Web Installer</div>
+    <h1>The Sticky Seed Reader</h1>
+    <p class="subtitle">
+      Install or update your Seeed Studio reTerminal Sticky (ESP32-S3 32MB) directly from your browser.
+    </p>
+
+    <div class="features">
+      <ul>
+        <li><strong>Multi-Format Reader:</strong> EPUB 2/3, PDF Reflow, MOBI, TXT, CBZ Manga, FB2</li>
+        <li><strong>Wireless Sideloading:</strong> Drag & drop web portal + Standard Ebooks & Calibre</li>
+        <li><strong>Smart Standby:</strong> Magnetic ambient clock with 15-min auto power save</li>
+        <li><strong>Safe Dual OTA:</strong> Dual 6.5MB partitions with automatic bootloader rollback</li>
+      </ul>
+    </div>
+
+    <div class="install-box">
+      <esp-web-install-button manifest="manifest.json">
+        <button slot="activate" class="btn" style="padding: 14px 28px; font-size: 16px; font-weight: 600; background: #0071e3; color: #fff; border: none; border-radius: 10px; cursor: pointer;">
+          CONNECT & INSTALL FIRMWARE
+        </button>
+        <span slot="unsupported">
+          WebSerial is not supported in this browser. Please use <strong>Google Chrome</strong> or <strong>Microsoft Edge</strong> on desktop over <strong>HTTPS</strong>.
+        </span>
+      </esp-web-install-button>
+    </div>
+
+    <div class="troubleshoot">
+      <strong>⚠️ Connection & Bootloader Tip:</strong><br>
+      ESP32-S3 boards require entering the ROM Bootloader mode for initial flashing:<br>
+      1. Unplug the USB-C cable from your computer.<br>
+      2. <strong>Press and hold the center [OK / BOOT] button</strong> on your reTerminal Sticky.<br>
+      3. While holding the button, <strong>plug the USB-C cable back in</strong>.<br>
+      4. Release the button, then click <strong>CONNECT & INSTALL FIRMWARE</strong> above.
+    </div>
+
+    <div class="links">
+      <a href="https://github.com/Volatile-Apps/The-Sticky-Seed-Reader-Firmware/releases/latest" target="_blank">Download Flash Pack (.zip)</a>
+      <span>&bull;</span>
+      <a href="https://github.com/Volatile-Apps/The-Sticky-Seed-Reader-Firmware" target="_blank">Project page &amp; help</a>
+    </div>
+  </div>
+</body>
+</html>
