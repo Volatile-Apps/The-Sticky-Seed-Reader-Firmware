@@ -14,7 +14,7 @@ private.
 ## Features
 
 - **Reads your books:** EPUB, PDF, MOBI / AZW3, FB2, CBZ comics, TXT and Markdown, from the
-  internal storage or a MicroSD card.
+  internal storage or a MicroSD card. Your current book's cover appears in the Library.
 - **Send books over Wi-Fi:** open the reader's web portal in any browser and drag books onto
   the page. Mount it as a network drive (WebDAV) from Finder, Explorer or GNOME Files.
 - **Online catalogs:** browse and download free books (Standard Ebooks, Project Gutenberg) or
